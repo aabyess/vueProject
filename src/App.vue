@@ -30,28 +30,19 @@
     </div>
   </div>
 </nav>
-
-<router-link to="/" >홈페이지</router-link> <br>
-<router-link to="/login" >로그인페이지</router-link>
-<router-link to="/sign" >회원가입페이지</router-link>
-<div class="mt-4">
-  <router-view :블로그글="블로그글"></router-view>
+<div>
+  <router-link to="/" >홈페이지</router-link> <br>
+  <router-link to="/login" >로그인페이지</router-link>
+  <router-link to="/sign" >회원가입페이지</router-link>
+  <router-view ></router-view>
 </div>
-
-
-<!--<List  :블로그글="블로그글"/>-->
-
 </template>
 
 <script>
-
-import blog from './assets/blog.js';
-
 export default {
   name: 'App',
   data(){
     return {
-      블로그글: blog  // 수정된 부분
     }
   },
   components: {
