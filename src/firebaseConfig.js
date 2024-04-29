@@ -1,19 +1,21 @@
-// firebaseConfig.js
-import firebase from 'firebase/app';
-import 'firebase/auth'; // auth 서비스를 사용하기 위해 import
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyBGGeNquYCFFhAHDxxgg9JqMQiR3nxA9aI",
+  authDomain: "vuefire-16122.firebaseapp.com",
+  projectId: "vuefire-16122",
+  storageBucket: "vuefire-16122.appspot.com",
+  messagingSenderId: "707357552563",
+  appId: "1:707357552563:web:2dfe209ef0d8149b90a5c6",
+  measurementId: "G-LX1MNNWF57"
 };
 
-// Firebase 초기화
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-}
-
-export default firebase;
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app); //eslint-disable-line no-unused-vars

@@ -2,7 +2,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 라우터만든거 from './router.js'
+import router from './router.js'
+import store from './store';
 
 
 // Import the functions you need from the SDKs you need
@@ -29,4 +30,7 @@ initializeApp(firebaseConfig); // 'app' 변수 없이 호출
 const appFirebase = initializeApp(firebaseConfig);
 getAnalytics(appFirebase); // 'analytics' 변수 없이 이렇게 호출
 
-createApp(App).use(라우터만든거).mount('#app')
+const app = createApp(App);
+app.use(store);
+
+createApp(App).use(router).use(store).mount('#app')
