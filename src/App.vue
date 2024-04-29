@@ -33,7 +33,7 @@
 
 <router-link to="/" >홈페이지</router-link> <br>
 <router-link to="/list" >리스트페이지</router-link>
-
+<router-link to="/Detail" >회원가입페이지</router-link>
 <div class="mt-4">
   <router-view :블로그글="블로그글"></router-view>
 </div>
